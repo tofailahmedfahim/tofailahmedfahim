@@ -1,0 +1,38 @@
+/*
+Write the program Which reads a sequence of integer from the user and stops
+by displaying “Done” when the sum of these values exceeds 100.
+ */
+
+import java.util.Scanner;
+
+public class answer2 {
+    public static void main(String[] args) {
+
+        int n, first = 0,next = 1;
+
+        System.out.println("Enter your integer: ");
+        //print  Enter Your Integer
+        Scanner input = new Scanner(System.in);
+        // take the input
+        n = input.nextInt();
+        System.out.print("The first " + n + "  numbers sum is: ");
+        //print  the output
+        System.out.print(first + " " + next);
+        //print  the output
+        int i = 1;
+        while (i<n-1)
+        {
+            int sum = first + next;
+            first = next;
+            next = sum;
+            System.out.print(" " + sum);//print  the output
+            i++;
+
+            if (sum>100){
+                System.out.println(" :done ");
+                break;
+            }
+        }
+
+    }
+}
